@@ -93,7 +93,6 @@ LRESULT WndProc(HWND window, UINT msg, WPARAM wParam, LPARAM lParam) {
 
 int main(int argc, char* argv[]) {
     
-
     ZeroMemory(&wnd, sizeof(wnd));
     wnd.cbSize = sizeof(WNDCLASSEX);
     wnd.lpfnWndProc = WndProc;
@@ -105,7 +104,6 @@ int main(int argc, char* argv[]) {
     int y = GetSystemMetrics(SM_CYSCREEN) / 2 - height / 2;
     window = CreateWindowEx(NULL, windowClassName, windowName, WS_SYSMENU | WS_MINIMIZEBOX, x, y, width, height, NULL, NULL, GetModuleHandle(0), NULL);
     ShowWindow(window, SW_SHOW);
-
 
     DXGI_SWAP_CHAIN_DESC desc;
     ZeroMemory(&desc, sizeof(desc));
@@ -137,6 +135,7 @@ int main(int argc, char* argv[]) {
         &deviceContext
     );
     CheckHR("Device Error!", -1);
+
     ID3D11Texture2D* frameBuff;
     IDXGISwapChain_GetBuffer(swapChain, 0, &IID_ID3D11Texture2D, &frameBuff);
     hr = ID3D11Device_CreateRenderTargetView(device, frameBuff, NULL, &target);
