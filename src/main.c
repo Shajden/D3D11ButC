@@ -144,10 +144,10 @@ int main(int argc, char* argv[]) {
 
     ByteDataAndSize vs;
     ByteDataAndSize ps;
-    if (!readBinaryFile("D:\\vs\\c\\Project1\\fxc\\shader-bin\\vs.dxbc", &vs)) {
+    if (!readBinaryFile("./vs.dxbc", &vs)) {
         Error("Vertex Shader Not Found", -1);
     }
-    if (!readBinaryFile("D:\\vs\\c\\Project1\\fxc\\shader-bin\\ps.dxbc", &ps)) {
+    if (!readBinaryFile("./ps.dxbc", &ps)) {
         Error("Pixel Shader Not Found", -1);
     }
 
