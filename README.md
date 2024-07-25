@@ -2,7 +2,7 @@
 ## Why?
 idk
 ## Requirements
-[Visual Studio 2022](https://visualstudio.microsoft.com/)
+* [Visual Studio 2022](https://visualstudio.microsoft.com/)
 * Desktop development with C++ Visual Studio Package
 * Game development with C++ Visual Studio Package
 ## Building and running from source
