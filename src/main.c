@@ -211,6 +211,7 @@ int main(int argc, char* argv[]) {
 
     ID3D11DeviceContext_VSSetShader(deviceContext, vertexShader, NULL, 0);
     ID3D11DeviceContext_PSSetShader(deviceContext, pixelShader, NULL, 0);
+
     MSG msg;
     while (1) {
         PeekMessage(&msg, NULL, 0, 0, PM_REMOVE);
