@@ -68,13 +68,12 @@ BOOL readBinaryFile(const char* fileName, ByteDataAndSize *returnVal) {
     if (!file) { return FALSE; };
     fseek(file, 0, SEEK_END);
 
-    vsSize = ftell(file);
+    out.size = ftell(file);
 
     fseek(file, 0, SEEK_SET);
-    out.size = vsSize;
-    out.bytes = malloc(vsSize);
+    out.bytes = malloc(out.size);
 
-    fread(out.bytes, 1, vsSize, file);
+    fread(out.bytes, 1, out.size, file);
 
     fclose(file);
 
